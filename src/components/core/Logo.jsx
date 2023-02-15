@@ -6,10 +6,13 @@ const Logo = ({ src, width, height, ...rest }) => {
   return (
     <Link className="navbar-brand" href="/" {...rest}>
       <Image
-        src={src.src}
-        width={width || src.width}
-        height={height || src.height}
+        src={src}
+        width={src.width}
+        height={src.height}
         alt="Brand Image"
+        className="logo-image"
+        priority
+        as="image"
       />
     </Link>
   );

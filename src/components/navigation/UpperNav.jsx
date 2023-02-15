@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "../core/Logo";
-import Link from "../core/Link";
+import SocialIcons from "./SocialIcons";
 
 import BrandImage from "../../../public/brand.svg";
 
@@ -14,21 +14,7 @@ const UpperNav = () => {
   return (
     <div className="d-flex align-items-center py-3 px-5">
       <Logo src={BrandImage} height={30} width={BrandImage.width / 3} />
-      <ul className="list-unstyled d-flex align-items-center ms-auto mb-0">
-        {mockList.map((v, i) => {
-          return (
-            <li key={i}>
-              <Link
-                href={v.path}
-                icon={v.icon}
-                className="btn btn-sm btn-primary me-2"
-              >
-                {v.text}
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
+      <SocialIcons data={mockList} />
     </div>
   );
 };
