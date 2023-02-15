@@ -16,7 +16,6 @@ export default function MainLayout({ children }) {
       <Navigation />
       {children}
       <Footer />
-      <Annotations />
     </>
   );
 }

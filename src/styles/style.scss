@@ -1,4 +1,31 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
 .logo-image {
   width: 280px;
   height: auto;
+}
+.annotations {
+  font-size: calc(1rem * 0.9);
+}
+
+.card-w-icon {
+  text-align: center;
+
+  .card {
+    border: 0 !important;
+    .icon-block {
+      @extend .d-flex, .align-items-center, .justify-content-center;
+      font-size: 3rem;
+      i {
+        @extend .bg-primary,
+          .bg-gradient,
+          .rounded-circle,
+          .d-flex,
+          .justify-content-center,
+          .align-items-center,
+          .shadow-lg;
+        padding: 1rem;
+      }
+    }
+  }
 }

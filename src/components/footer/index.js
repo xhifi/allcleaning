@@ -1,6 +1,7 @@
 import Logo from "../core/Logo";
 import BrandImage from "../../../public/brand.svg";
 import UL from "../core/UnorderedList";
+import Annotations from "./Annotation";
 
 const mockData = [
   {
@@ -25,21 +26,40 @@ const mockData = [
   },
 ];
 
+const mockDataAnnotations = {
+  developer: {
+    name: "Brainloggers",
+    url: "https://www.brainloggers.co.uk",
+    icon: "",
+  },
+  platform: {
+    name: "NextJs",
+    url: "https://www.nextjs.com",
+    icon: "nextjs",
+  },
+};
+
 export default function FooterComponent() {
   return (
-    <div className="container-fluid px-5 py-4 bg-warning">
-      <div className="row row-cols-4">
-        <div className="col">
-          <Logo src={BrandImage} height={30} width={BrandImage.width / 3} />
+    <>
+      <div className="container-fluid px-5 py-4 bg-warning bg-dark text-white">
+        <div className="row row-cols-4">
+          <div className="col">
+            <Logo src={BrandImage} height={30} width={BrandImage.width / 3} />
+          </div>
+          {mockData.map((v, i) => {
+            return (
+              <div className="col" key={i}>
+                <UL title={v.title} data={v.data}></UL>
+              </div>
+            );
+          })}
         </div>
-        {mockData.map((v, i) => {
-          return (
-            <div className="col" key={i}>
-              <UL title={v.title} data={v.data}></UL>
-            </div>
-          );
-        })}
       </div>
-    </div>
+      <Annotations
+        developer={mockDataAnnotations.developer}
+        platform={mockDataAnnotations.platform}
+      />
+    </>
   );
 }
