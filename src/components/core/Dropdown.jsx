@@ -17,7 +17,7 @@ const Dropdown = ({ children, menu, ...rest }) => {
       <ul class="dropdown-menu">
         {menu.map((v, i) => {
           return (
-            <li>
+            <li key={i}>
               <Link href={v.link} className="dropdown-item">
                 {v.icon && <i class={`bi bi-${v.icon}`}></i>} {v.text}
               </Link>

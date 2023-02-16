@@ -3,7 +3,7 @@ import MainLayout from "@/components/layouts/Main";
 const FourOhFour = () => {
   return (
     <MainLayout>
-      <div>FourOhFour :'(</div>
+      <div>FourOhFour :&apos;(</div>
     </MainLayout>
   );
 };

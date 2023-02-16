@@ -1,4 +1,4 @@
-import Link from "../Link";
+import Link from "../core/Link";
 
 const schemaMock = {
   link: {
@@ -23,12 +23,16 @@ const Card = ({ data, ...rest }) => {
         href={data.link.path}
         className="text-decoration-none text-dark card-w-img"
       >
-        <div class="col" {...rest}>
-          <div class="card">
-            <img src={data.img.url} class="card-img-top" alt={data.img.alt} />
-            <div class="card-body">
-              <h5 class="card-title">{data.title}</h5>
-              <p class="card-text">{data.description}</p>
+        <div className="col" {...rest}>
+          <div className="card">
+            <img
+              src={data.img.url}
+              className="card-img-top"
+              alt={data.img.alt}
+            />
+            <div className="card-body">
+              <h5 className="card-title">{data.title}</h5>
+              <p className="card-text">{data.description}</p>
             </div>
           </div>
         </div>
@@ -38,14 +42,14 @@ const Card = ({ data, ...rest }) => {
   if (data.type === "with-icon") {
     return (
       <Link href={data.link.path} className="text-decoration-none text-dark">
-        <div class="col card-w-icon">
-          <div class="card">
+        <div className="col card-w-icon">
+          <div className="card">
             <div className="icon-block">
               <i className={`bi bi-${data.icon.name} card-icon text-white`}></i>
             </div>
-            <div class="card-body">
-              <h3 class="card-title">{data.title}</h3>
-              <p class="card-text">{data.description}</p>
+            <div className="card-body">
+              <h3 className="card-title">{data.title}</h3>
+              <p className="card-text">{data.description}</p>
             </div>
           </div>
         </div>
