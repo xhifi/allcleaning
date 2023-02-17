@@ -1,5 +1,5 @@
 import Logo from "../core/Logo";
-import BrandImage from "../../../public/brand.svg";
+import BrandImage_light from "../../../public/brand_light.svg";
 import UL from "../core/UnorderedList";
 import Annotations from "./Annotation";
 
@@ -45,7 +45,7 @@ export default function FooterComponent() {
       <div className="container-fluid px-5 py-4 bg-warning bg-dark text-white">
         <div className="row row-cols-4">
           <div className="col">
-            <Logo src={BrandImage} height={30} width={BrandImage.width / 3} />
+            <Logo src={BrandImage_light} fill="contain" />
           </div>
           {mockData.map((v, i) => {
             return (

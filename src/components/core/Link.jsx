@@ -9,14 +9,11 @@ export default function Link({ children, href = "", icon, ...rest }) {
         target="_blank"
         rel="noreferrer"
         {...rest}
-        className={
-          icon ? `d-flex align-items-center ${rest.className}` : rest.className
-        }
+        className={rest.className}
       >
         {icon ? (
           <>
-            <Icon name={icon} className="me-1" />
-            {children}
+            <Icon name={icon} /> {children}
           </>
         ) : (
           children
@@ -25,17 +22,10 @@ export default function Link({ children, href = "", icon, ...rest }) {
     );
   }
   return (
-    <NLink
-      href={href}
-      {...rest}
-      className={
-        icon ? `d-flex align-items-center ${rest.className}` : rest.className
-      }
-    >
+    <NLink href={href} {...rest} className={rest.className}>
       {icon ? (
         <>
-          <Icon name={icon} />
-          {children}
+          <Icon name={icon} /> {children}
         </>
       ) : (
         children

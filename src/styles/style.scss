@@ -1,5 +1,15 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Signika Negative", sans-serif;
+  @extend .fw-bold;
+}
+
 .logo-image {
   width: 280px;
   height: auto;
